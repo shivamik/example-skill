@@ -43,7 +43,7 @@ echo "   [5] All of the above"
 echo "   [0] Skip"
 echo ""
 printf "   Choose [0]: "
-read -r choice
+read -r choice < /dev/tty
 
 MCP_ENTRY='{ "url": "https://api-mcp.imagekit.in/sse" }'
 
