@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "imagekit-skills"
+version = "0.1.0"
+description = "Install ImageKit Agent Skills and MCP config for Copilot, Claude, Cursor, and Codex"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "click>=8.0",
+]
+
+[project.scripts]
+imagekit-skills = "imagekit_skills.cli:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/imagekit_skills"]
