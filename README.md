@@ -11,7 +11,7 @@ Works with **GitHub Copilot**, **Claude Code**, **Cursor**, **Codex**, and any [
 Run this in your project directory:
 
 ```bash
-uvx --from "git+https://github.com/shivamik/example-skill.git" imagekit-skills install
+curl -fsSL https://raw.githubusercontent.com/shivamik/example-skill/main/install.sh | bash
 ```
 
 That's it. You now have ImageKit skills available in your AI coding tool.
@@ -35,9 +35,19 @@ By default, skills are installed to `.agents/skills/` in your project — the un
 
 ## Installation Options
 
-### Install with `uv` (recommended)
+### One-liner (no dependencies)
 
-No install needed — just run:
+```bash
+curl -fsSL https://raw.githubusercontent.com/shivamik/example-skill/main/install.sh | bash
+```
+
+For global install (all projects):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/shivamik/example-skill/main/install.sh | bash -s -- --global
+```
+
+### Install with `uv`
 
 ```bash
 uvx --from "git+https://github.com/shivamik/example-skill.git" imagekit-skills install
